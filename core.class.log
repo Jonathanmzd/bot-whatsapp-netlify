@@ -1,0 +1,87 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '35679652834@s.whatsapp.net',
+    fromMe: false,
+    id: '3AB2439E606817AF06FD',
+    participant: undefined
+  },
+  messageTimestamp: 1741890073,
+  pushName: 'Jonathan',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'hola',
+  from: '35679652834'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '35679652834@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB059C632B07264AF5639',
+    participant: undefined
+  },
+  messageTimestamp: 1741890146,
+  pushName: 'Jonathan',
+  broadcast: false,
+  message: Message {
+    conversation: 'mzd',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  verifiedBizName: 'Jonathan',
+  body: 'mzd',
+  from: '35679652834'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_506fe26b-b39d-4753-b3f4-59ecb09f4c89',
+  keyword: 'key_14369a30-74c0-4362-a0e2-f476ba0732e2',
+  answer: '🙌 Hola bienvenido a este *Chatbot*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'c7632345e3cc12f93214d58a3044bb2c'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_df7ad58b-4f36-40cf-bee8-cba940b988f2',
+  keyword: 'ans_506fe26b-b39d-4753-b3f4-59ecb09f4c89',
+  answer: 'te comparto los siguientes links de interes sobre el proyecto\n' +
+    '👉 *doc* para ver la documentación\n' +
+    '👉 *gracias*  para ver la lista de videos\n' +
+    '👉 *discord* unirte al discord',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '4cc69f4640b81b7593fdb859a280224c'
+}
