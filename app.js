@@ -69,22 +69,6 @@ const flowCaptura = addKeyword(['*']).addAnswer(
     ]
 )
 
-const flowAsesores = addKeyword(['asesor', 'ayuda']).addAnswer(
-    async (ctx, { flow, database }) => {
-        const asesores = ['asesor1', 'asesor2', 'asesor3', 'asesor4', 'asesor5']
-        const asesorAsignado = asesores[Math.floor(Math.random() * asesores.length)]
-
-        // Guardar el asesor asignado en la base de datos
-        await database.insert('conversaciones', {
-            usuario: ctx.from,
-            mensaje: ctx.body,
-            asesor_asignado: asesorAsignado,
-        })
-
-        return `🙌 Tu conversación ha sido asignada a ${asesorAsignado}. Por favor, espera mientras te atienden.`
-    }
-)
-
 const flowPrincipal = addKeyword(['mzd'])
     .addAnswer('🙌 Hola bienvenido a este *Chatbot*')
     .addAnswer(
@@ -96,7 +80,7 @@ const flowPrincipal = addKeyword(['mzd'])
         ],
         null,
         null,
-        [flowAsesor, flowGracias, flowTuto, flowCaptura, flowAsesores]
+        [flowAsesor, flowGracias, flowTuto, flowCaptura]
     )
 
 const main = async () => {
