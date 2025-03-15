@@ -27,6 +27,7 @@ const main = async () => {
 ```
 
 ```
+mkdir bot_sessions sino existe la carpeta
 npm install
 npm start
 ```

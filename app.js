@@ -27,9 +27,9 @@ const MYSQL_DB_PORT = '3306'
 
 const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
-const flowDocs = addKeyword(['doc', 'documentacion', 'documentación']).addAnswer(
+const flowAsesor = addKeyword(['asesor', 'humano', 'agente']).addAnswer(
     [
-        '📄 Aquí encontras las documentación recuerda que puedes mejorarla',
+        '📄 Aquí encontras la documentación recuerda que puedes mejorarla',
         'https://bot-whatsapp.netlify.app/',
         '\n*2* Para siguiente paso.',
     ],
@@ -41,7 +41,7 @@ const flowDocs = addKeyword(['doc', 'documentacion', 'documentación']).addAnswe
 const flowTuto = addKeyword(['tutorial', 'tuto']).addAnswer(
     [
         '🙌 Aquí encontras un ejemplo rapido',
-        'https://bot-whatsapp.netlify.app/docs/example/',
+        'https://bot-whatsapp.netlify.app/Asesor/example/',
         '\n*2* Para siguiente paso.',
     ],
     null,
@@ -62,11 +62,27 @@ const flowGracias = addKeyword(['gracias', 'grac']).addAnswer(
     [flowSecundario]
 )
 
-const flowDiscord = addKeyword(['discord']).addAnswer(
-    ['🤪 Únete al discord', 'https://link.codigoencasa.com/DISCORD', '\n*2* Para siguiente paso.'],
-    null,
-    null,
-    [flowSecundario]
+const flowCaptura = addKeyword(['*']).addAnswer(
+    [
+        '🤖 Este es un mensaje genérico para capturar cualquier mensaje no reconocido.',
+        'Por favor, utiliza una de las palabras clave disponibles.',
+    ]
+)
+
+const flowAsesores = addKeyword(['asesor', 'ayuda']).addAnswer(
+    async (ctx, { flow, database }) => {
+        const asesores = ['asesor1', 'asesor2', 'asesor3', 'asesor4', 'asesor5']
+        const asesorAsignado = asesores[Math.floor(Math.random() * asesores.length)]
+
+        // Guardar el asesor asignado en la base de datos
+        await database.insert('conversaciones', {
+            usuario: ctx.from,
+            mensaje: ctx.body,
+            asesor_asignado: asesorAsignado,
+        })
+
+        return `🙌 Tu conversación ha sido asignada a ${asesorAsignado}. Por favor, espera mientras te atienden.`
+    }
 )
 
 const flowPrincipal = addKeyword(['mzd'])
@@ -74,13 +90,13 @@ const flowPrincipal = addKeyword(['mzd'])
     .addAnswer(
         [
             'te comparto los siguientes links de interes sobre el proyecto',
-            '👉 *doc* para ver la documentación',
+            '👉 *asesor* para ver la documentación',
             '👉 *gracias*  para ver la lista de videos',
-            '👉 *discord* unirte al discord',
+            '👉 *ayuda* para hablar con un asesor',
         ],
         null,
         null,
-        [flowDocs, flowGracias, flowTuto, flowDiscord]
+        [flowAsesor, flowGracias, flowTuto, flowCaptura, flowAsesores]
     )
 
 const main = async () => {
