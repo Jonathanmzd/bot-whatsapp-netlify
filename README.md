@@ -72,7 +72,7 @@ Este proyecto es un bot de WhatsApp que utiliza Node.js, MySQL y Socket.io para 
    ```
 3. Configura las variables de entorno en un archivo `.env`:
    ```env
-   MYSQL_DB_HOST=192.168.45.129
+   MYSQL_DB_HOST=192.168.xx.xx
    MYSQL_DB_USER=gateway
    MYSQL_DB_PASSWORD=7layer
    MYSQL_DB_NAME=bot
