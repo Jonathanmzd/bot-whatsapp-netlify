@@ -1,0 +1,96 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '573174189413@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB03E5CA3C3CF557A067A',
+    participant: undefined
+  },
+  messageTimestamp: 1742306406,
+  pushName: 'JA',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'hola',
+  from: '573174189413'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_a766ef9c-6d92-495e-a751-e3855991a5a8',
+  keyword: 'key_5fa41e75-b3ed-4f75-b25d-83281796365c',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '65d66bef36abd88075482f218dde04de'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_84a2d2b6-6edf-4b7e-9a1f-d478b689b4b0',
+  keyword: 'ans_a766ef9c-6d92-495e-a751-e3855991a5a8',
+  answer: 'Bienvenido al chat de preguntas frecuentes de Superintendencia de Notariado y Registro. Mi nombre es Vicky, su asistente virtual que atenderá su consulta. Antes de continuar, por favor ingrese su nombre:',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '6e70180a1ae6646ff36dbf6738241769'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_8e0586af-bec7-4360-ac18-db1cbb0e4b4e',
+  keyword: 'ans_84a2d2b6-6edf-4b7e-9a1f-d478b689b4b0',
+  answer: '__capture_only_intended__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'db0916a30a15dd4ff0099f7fca974635'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573174189413@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB08C331410C75702925D',
+    participant: undefined
+  },
+  messageTimestamp: 1742306459,
+  pushName: 'JA',
+  broadcast: false,
+  message: Message {
+    conversation: 'ja',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'ja',
+  from: '573174189413'
+}
